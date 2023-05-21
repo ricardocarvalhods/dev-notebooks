@@ -1,0 +1,34 @@
+{
+    "name": "dev-notebooks",
+    "image": "mcr.microsoft.com/vscode/devcontainers/python:3.9-bullseye",
+    // Run pip just the first time: after CREATION of the image
+    "postCreateCommand": "pip install -r ./requirements.txt --trusted-host=pypi.org --trusted-host=files.pythonhosted.org",
+    // "forwardPorts": [8501],
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "python.defaultInterpreterPath": "/usr/local/bin/python",
+                "python.linting.pylintPath": "/usr/local/bin/pylint",
+                "python.linting.pylintArgs": [
+                    "--init-hook='import sys; sys.path.append(\"/usr/local/lib/python3.9/dist-packages\")'"
+                ]
+            },
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-toolsai.jupyter",
+                "ms-toolsai.jupyter-keymap",
+                "ms-toolsai.jupyter-renderers",
+                "vscode-icons-team.vscode-icons",
+                "wayou.vscode-todo-highlight",
+                "timonwong.shellcheck",
+                "gruntfuggly.todo-tree",
+                "njqdev.vscode-python-typehint",
+                "aaron-bond.better-comments"
+            ]
+        }
+    },
+    "runArgs": [
+        "--network=host"
+    ]
+}

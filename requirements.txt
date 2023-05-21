@@ -1,0 +1,8 @@
+ipykernel
+nbconvert
+
+pandas
+numpy
+requests
+openpyxl
+tqdm
