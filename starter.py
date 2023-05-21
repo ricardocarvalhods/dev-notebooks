@@ -5,7 +5,7 @@ from tqdm import tqdm
 import pickle
 from collections import Counter
 
-# %%
+#%%
 df = pd.read_excel("Teste.xlsx", converters={'AGE':str})
 df.head()
 
