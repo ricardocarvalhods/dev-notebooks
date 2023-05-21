@@ -11,7 +11,7 @@ df.head()
 
 
 #%%
-headers = {"Authorization": "Bearer abC4dEFg12hai.fjAf"}
+headers = {"Authorization": "Bearer"}
 
 
 #%%
